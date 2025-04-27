@@ -1,1 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
+
+
+@theme {
+    --font-primary: "Inter", "sans-serif";
+    --color-primary: #58DAD4;
+    --color-secondary: #1B3556;
+    --color-background: #0F172A;
+
+    --animate-slide: slide 0.2s ease-in-out 1;
+    @keyframes slide {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+        51% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}
+
+
+/* 
+    Header
+*/
+
+/* Social */
+.social-icons {
+    @apply flex gap-4 mt-8 text-slate-400;
+}
+
+.social-icons a {
+    @apply transition-colors duration-200;
+}
+
+.social-icons a:hover {
+    @apply text-slate-200;
+}
+
+/* Navbar  */
+.nav .nav-link {
+    @apply flex items-center gap-2 text-slate-400 hover:text-slate-200 focus-visible:text-slate-200 py-3;
+}
+
+
+.nav .nav-link .nav-indicator {
+    @apply mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none;
+}
+
+.nav .nav-link .nav-text {
+    @apply text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200;
+}
+
+.nav .active {
+    @apply text-slate-200 ;
+}
+
+.nav .active .nav-indicator {
+    @apply w-16 bg-slate-200 transition-none;
+}
+
+.nav .active .nav-text {
+    @apply text-slate-200;
+}
+
+.cv-btn:hover svg {
+    @apply animate-slide;
+}
+
+
+/* 
+    Main
+*/
+
+/* Experience */
+.experience {
+    @apply flex gap-8 items-start p-6  border-t-1 border-white/0 transition-all duration-200;
+}
+
+.experience h5 {
+    @apply transition-all duration-200;
+}
+
+.experience svg {
+    @apply transition-transform duration-200;
+}
+
+.experience:hover {
+    @apply isolate rounded bg-white/4 shadow-lg ring-2 ring-white/5 border-white/5;
+}
+
+.experience:hover h5 {
+    @apply text-primary;
+}
+
+.experience:hover h5 svg {
+    @apply translate-x-1 -translate-y-1;
+}
+
+.experience .tag {
+    @apply text-primary bg-secondary/70 px-3 py-1 rounded-full text-xs leading-5 font-medium;
+}
+
+
+/* 
+    Scrollbar
+*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1E2436;
+    border: #333748 1px solid;
+    padding: 2px 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
