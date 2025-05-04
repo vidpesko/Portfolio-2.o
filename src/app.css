@@ -44,6 +44,10 @@
 }
 
 /* Navbar  */
+.nav li {
+    @apply flex;
+}
+
 .nav .nav-link {
     @apply flex items-center gap-2 text-slate-400 hover:text-slate-200 focus-visible:text-slate-200 py-3;
 }
@@ -79,34 +83,42 @@
 */
 
 /* Experience */
-.experience {
-    @apply flex gap-8 items-start p-6  border-t-1 border-white/0 transition-all duration-200;
+.block {
+    @apply flex gap-8 items-start p-6  border-t-1 border-white/0 transition-all duration-200 mb-4;
 }
 
-.experience h5 {
+.block h5 {
     @apply transition-all duration-200;
 }
 
-.experience svg {
+.block svg {
     @apply transition-transform duration-200;
 }
 
-.experience:hover {
+.block:hover {
     @apply isolate rounded bg-white/4 shadow-lg ring-2 ring-white/5 border-white/5;
 }
 
-.experience:hover h5 {
+.block:hover h5 {
     @apply text-primary;
 }
 
-.experience:hover h5 svg {
+.block:hover h5 svg {
     @apply translate-x-1 -translate-y-1;
 }
 
-.experience .tag {
+.block .tag {
     @apply text-primary bg-secondary/70 px-3 py-1 rounded-full text-xs leading-5 font-medium;
 }
 
+/* Projects */
+.project img {
+    @apply transition-all duration-200;
+}
+
+.project:hover img {
+    @apply border-slate-200;
+}
 
 /* 
     Scrollbar

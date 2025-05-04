@@ -1,4 +1,6 @@
 <script>
+    import KolektorLogo from '$lib/static/images/kolektor-etra.png';
+
     import { page } from '$app/stores';
 
     let sectionFocus = $derived($page.url.hash);
@@ -89,10 +91,12 @@
             </section>
             <!-- Experience -->
             <section id="izkusnje" class="mt-20">
-                <div class="experience">
-                    <!-- Time range -->
+                <a class="experience block" href="https://kolektor-etra.si" target="_blank">
+                    <!-- Time range & img -->
                     <div class="">
                         <p class="flex items-center text-sm">20218 <span class="h-px w-4 bg-slate-400 mx-2"></span> 2020</p>
+
+                        <img src={KolektorLogo} alt="" class="mt-4 rounded">
                     </div>
                     <!-- Company / job info -->
                     <div class="">
@@ -104,12 +108,79 @@
                         <!-- Tags -->
                         <ul class="flex items-center gap-2 mt-4 flex-wrap">
                             <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
                         </ul>
                     </div>
-                </div>
-            </section>
+                </a>
+                <a class="experience block" href="https://kolektor-etra.si" target="_blank">
+                    <!-- Time range & img -->
+                    <div class="">
+                        <p class="flex items-center text-sm">20218 <span class="h-px w-4 bg-slate-400 mx-2"></span> 2020</p>
 
-            <section id="projekti" class="h-96"></section>
+                        <img src={KolektorLogo} alt="" class="mt-4 rounded">
+                    </div>
+                    <!-- Company / job info -->
+                    <div class="">
+                        <h5 class="leading-5 text-slate-200 mb-2 flex items-center gap-2">
+                            Programer · Kolektor Etra
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M13 19q-.425 0-.712-.288T12 18v-8H4q-.425 0-.712-.288T3 9t.288-.712T4 8h9q.425 0 .713.288T14 9v9q0 .425-.288.713T13 19m5-5q-.425 0-.712-.288T17 13V5H9q-.425 0-.712-.288T8 4t.288-.712T9 3h9q.425 0 .713.288T19 4v9q0 .425-.288.713T18 14"/></svg>
+                        </h5>
+                        <p class="text-sm leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque omnis, iure rerum ullam unde minima earum quidem doloribus necessitatibus qui, adipisci rem error odit. Fugit neque provident perspiciatis nobis!</p>
+                        <!-- Tags -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap">
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                        </ul>
+                    </div>
+                </a>
+            </section>
+            <!-- Projects -->
+            <section id="projekti" class="mt-20">
+                <a class="project block" href="https://github.com" target="_blank">
+                    <!-- Image -->
+                    <div class="w-1/3">
+                        <img src={KolektorLogo} class="w-full rounded border border-slate-600 p-px" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div class="w-2/3">
+                        <h5 class="leading-5 text-slate-200 mb-2 flex items-center gap-2">
+                            Programer · Kolektor Etra
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M13 19q-.425 0-.712-.288T12 18v-8H4q-.425 0-.712-.288T3 9t.288-.712T4 8h9q.425 0 .713.288T14 9v9q0 .425-.288.713T13 19m5-5q-.425 0-.712-.288T17 13V5H9q-.425 0-.712-.288T8 4t.288-.712T9 3h9q.425 0 .713.288T19 4v9q0 .425-.288.713T18 14"/></svg>
+                        </h5>
+                        <p class="text-sm leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque omnis, iure rerum ullam unde minima earum quidem doloribus necessitatibus qui, adipisci rem error odit. Fugit neque provident perspiciatis nobis!</p>
+                        <!-- Tags -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap">
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">PHP</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="/projekti" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
+                    Poglej vse projekte
+                    <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                    </svg>
+                </a>
+            </section>
         </main>
     </div>
 </div>
