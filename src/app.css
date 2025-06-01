@@ -25,6 +25,14 @@
     }
 }
 
+::-moz-selection { /* Code for Firefox */
+    @apply text-black bg-primary;
+}
+
+::selection {
+    @apply text-black bg-primary;
+}
+
 
 /* 
     Header
@@ -42,6 +50,11 @@
 .social-icons a:hover {
     @apply text-slate-200;
 }
+
+.personal-info a:hover {
+    @apply underline text-slate-200;
+}
+
 
 /* Navbar  */
 .nav li {
@@ -82,36 +95,65 @@
     Main
 */
 
+.title {
+    @apply text-3xl font-semibold text-slate-200 mb-4 flex relative items-center;
+}
+
+.title span {
+    @apply text-primary font-medium me-4 font-mono;
+}
+
+.title::after {
+    content: "";
+    @apply relative ms-6 w-60 h-px bg-slate-500/40 rounded-full;
+}
+
 /* Experience */
-.block {
+.custom-block {
     @apply flex gap-8 items-start p-6  border-t-1 border-white/0 transition-all duration-200 mb-4;
 }
 
-.block h5 {
+.custom-block h5 {
     @apply transition-all duration-200;
 }
 
-.block svg {
+.custom-block svg {
     @apply transition-transform duration-200;
 }
 
-.block:hover {
+.custom-block:hover {
     @apply isolate rounded bg-white/4 shadow-lg ring-2 ring-white/5 border-white/5;
 }
 
-.block:hover h5 {
+.custom-block:hover h5 {
     @apply text-primary;
 }
 
-.block:hover h5 svg {
+.custom-block:hover h5 svg {
     @apply translate-x-1 -translate-y-1;
 }
 
-.block .tag {
+.custom-block .tag, .project .tag {
     @apply text-primary bg-secondary/70 px-3 py-1 rounded-full text-xs leading-5 font-medium;
 }
 
 /* Projects */
+.project {
+    @apply grid grid-cols-12 gap-2 grid-rows-1 relative;
+}
+
+.project .image {
+    @apply col-start-1 col-end-7 z-10;
+}
+
+.project .text-container {
+    @apply col-start-5 col-end-12 z-20 absolute text-end top-1/2 -translate-y-1/2;
+}
+
+.project .text {
+    @apply bg-secondary p-4 rounded shadow-lg text-slate-300/80;
+}
+
 .project img {
     @apply transition-all duration-200;
 }
