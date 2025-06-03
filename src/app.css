@@ -113,6 +113,10 @@
     @apply flex gap-8 items-start p-6  border-t-1 border-white/0 transition-all duration-200 mb-4;
 }
 
+.custom-block p span {
+    @apply text-slate-300;
+}
+
 .custom-block h5 {
     @apply transition-all duration-200;
 }
@@ -143,7 +147,7 @@
 }
 
 .project .image {
-    @apply col-start-1 col-end-7 z-10;
+    @apply col-start-1 col-end-7 z-10 relative cursor-pointer;
 }
 
 .project .text-container {
@@ -155,11 +159,23 @@
 }
 
 .project img {
-    @apply transition-all duration-200;
+    @apply transition-all duration-200 h-[22rem] object-cover;
 }
 
 .project:hover img {
     @apply border-slate-200;
+}
+
+.project .text-container span {
+    @apply text-slate-300;
+}
+
+.project-reversed .image {
+    @apply col-start-5 col-end-12;
+}
+
+.project-reversed .text-container {
+    @apply col-start-1 col-end-7 text-start;
 }
 
 /* 

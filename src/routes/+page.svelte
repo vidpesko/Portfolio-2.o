@@ -1,14 +1,25 @@
 <script>
     import KolektorLogo from '$lib/static/images/kolektor-etra.png';
+    import GZCeljeThumbnail from '$lib/static/images/thumbnail gz celje.png';
+    import VozilaThumb from '$lib/static/images/vozila thumb.png';
+    import Vozila2 from '$lib/static/images/vozila 3.png';
+    import ControlyThumb from '$lib/static/images/controly thumb.png';
+    import Controly1 from '$lib/static/images/controly 1.png';
+    import Controly2 from '$lib/static/images/controly 2.png';
+    import Controly3 from '$lib/static/images/controly 3.png';
+    import GZCelje2 from '$lib/static/images/gz edit 2.png';
+    import MojeLinije from '$lib/static/images/mojelinije 1.png';
     import JazImg from '$lib/static/images/jaz.jpg';
 
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
+    import { slide } from 'svelte/transition';
 
     let sectionFocus = $derived($page.url.hash);
 
     let mouseX = $state(0);
     let mouseY = $state(0);
+    let focusedProject = $state(null);
 
     function handleMouseMove(event) {
         mouseX = event.clientX;
@@ -24,13 +35,14 @@
             entries.forEach(entry => {
             const id = entry.target.getAttribute("id");
             if (entry.isIntersecting) {
+                console.log(`Section ${id} is active`);
                 sectionFocus = `#${id}`;
             }
             });
         },
         {
             root: null,
-            threshold: 0.9 // Adjust as needed (60% visible = active)
+            threshold: 0.4 // Adjust as needed (60% visible = active)
         }
         );
 
@@ -180,6 +192,19 @@
                     </div>
                     <div class="">
                         <p class="text-slate-200 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32"><!-- Icon from VSCode Icons by Roberto Huertas - https://github.com/vscode-icons/vscode-icons/blob/master/LICENSE --><path fill="#ff3e00" d="M26.47 5.7a8.973 8.973 0 0 0-11.793-2.454L7.96 7.4a7.46 7.46 0 0 0-3.481 5.009a7.7 7.7 0 0 0 .8 5.058a7.4 7.4 0 0 0-1.151 2.8a7.8 7.8 0 0 0 1.4 6.028a8.977 8.977 0 0 0 11.794 2.458L24.04 24.6a7.47 7.47 0 0 0 3.481-5.009a7.67 7.67 0 0 0-.8-5.062a7.35 7.35 0 0 0 1.152-2.8A7.8 7.8 0 0 0 26.47 5.7"/><path fill="#fff" d="M14.022 26.64A5.41 5.41 0 0 1 8.3 24.581a4.68 4.68 0 0 1-.848-3.625a4 4 0 0 1 .159-.61l.127-.375l.344.238a8.8 8.8 0 0 0 2.628 1.274l.245.073l-.025.237a1.44 1.44 0 0 0 .271.968a1.63 1.63 0 0 0 1.743.636a1.5 1.5 0 0 0 .411-.175l6.7-4.154a1.37 1.37 0 0 0 .633-.909a1.4 1.4 0 0 0-.244-1.091a1.63 1.63 0 0 0-1.726-.622a1.5 1.5 0 0 0-.413.176l-2.572 1.584a5 5 0 0 1-1.364.582a5.415 5.415 0 0 1-5.727-2.06a4.68 4.68 0 0 1-.831-3.628A4.5 4.5 0 0 1 9.9 10.09l6.708-4.154a5 5 0 0 1 1.364-.581A5.41 5.41 0 0 1 23.7 7.414a4.68 4.68 0 0 1 .848 3.625a4 4 0 0 1-.159.61l-.127.375l-.344-.237a8.7 8.7 0 0 0-2.628-1.274l-.245-.074l.025-.237a1.44 1.44 0 0 0-.272-.968a1.63 1.63 0 0 0-1.725-.622a1.5 1.5 0 0 0-.411.176l-6.722 4.14a1.35 1.35 0 0 0-.631.908a1.4 1.4 0 0 0 .244 1.092a1.63 1.63 0 0 0 1.726.621a1.5 1.5 0 0 0 .413-.175l2.562-1.585a4.9 4.9 0 0 1 1.364-.581a5.42 5.42 0 0 1 5.728 2.059a4.68 4.68 0 0 1 .843 3.625a4.5 4.5 0 0 1-2.089 3.013l-6.707 4.154a4.9 4.9 0 0 1-1.364.581"/></svg>
+                            Svelte (Kit)
+                        </p>
+                        <div class="flex mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="text-slate-200 flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 128 128"><!-- Icon from Devicon by konpa - https://github.com/devicons/devicon/blob/master/LICENSE --><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z"/><path fill="#F16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z"/></svg>
                             HTML & CSS
                         </p>
@@ -188,7 +213,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zm3.15.45l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15zm0-5.025"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                         </div>
                     </div>
                     <div class="">
@@ -200,7 +225,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zm3.15.45l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15zm0-5.025"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zm3.15.45l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15zm0-5.025"/></svg>
                         </div>
                     </div>
@@ -213,7 +238,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zm3.15.45l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15zm0-5.025"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zm3.15.45l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15zm0-5.025"/></svg>
                         </div>
                     </div>
@@ -227,58 +252,43 @@
                 </h2>
                 <a class="experience custom-block" href="https://kolektor-etra.si" target="_blank">
                     <!-- Time range & img -->
-                    <div class="">
-                        <p class="flex items-center text-sm">20218 <span class="h-px w-4 bg-slate-400 mx-2"></span> 2020</p>
+                    <div class="w-1/8">
+                        <p class="flex items-center text-sm">Poletje 2024</p>
 
                         <img src={KolektorLogo} alt="" class="mt-4 rounded">
                     </div>
                     <!-- Company / job info -->
-                    <div class="">
+                    <div class="w-7/8">
                         <h5 class="leading-5 text-slate-200 mb-2 flex items-center gap-2">
                             Programer · Kolektor Etra
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M13 19q-.425 0-.712-.288T12 18v-8H4q-.425 0-.712-.288T3 9t.288-.712T4 8h9q.425 0 .713.288T14 9v9q0 .425-.288.713T13 19m5-5q-.425 0-.712-.288T17 13V5H9q-.425 0-.712-.288T8 4t.288-.712T9 3h9q.425 0 .713.288T19 4v9q0 .425-.288.713T18 14"/></svg>
                         </h5>
-                        <p class="text-sm leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque omnis, iure rerum ullam unde minima earum quidem doloribus necessitatibus qui, adipisci rem error odit. Fugit neque provident perspiciatis nobis!</p>
+                        <p class="text-sm leading-normal">V enem izmed največjih slovenskih podjetij sem pomagal s <span>digitalizacijo poslovnih procesov</span> in <span>izdelavo internih API-jev</span>. Med delom sem se naučil delati v skupini s ostalimi programerji. Uporabljali smo tehnologije kot so <span>Git</span>, <span>PostgresSQL</span> in <span>Microsoft Azure</span>.</p>
                         <!-- Tags -->
                         <ul class="flex items-center gap-2 mt-4 flex-wrap">
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">PostgresSQL</li>
+                            <li class="tag">Windows & CMD</li>
+                            <li class="tag">API</li>
+                            <li class="tag">Git</li>
                         </ul>
                     </div>
                 </a>
-                <a class="experience custom-block" href="https://kolektor-etra.si" target="_blank">
+                <div class="experience custom-block">
                     <!-- Time range & img -->
-                    <div class="">
-                        <p class="flex items-center text-sm">20218 <span class="h-px w-4 bg-slate-400 mx-2"></span> 2020</p>
+                    <div class="w-1/8">
+                        <p class="flex items-center text-sm">2021 <span class="h-px w-4 bg-slate-400 mx-2"></span> 2024</p>
 
-                        <img src={KolektorLogo} alt="" class="mt-4 rounded">
+                        <!-- <img src={KolektorLogo} alt="" class="mt-4 rounded"> -->
                     </div>
                     <!-- Company / job info -->
-                    <div class="">
+                    <div class="w-7/8">
                         <h5 class="leading-5 text-slate-200 mb-2 flex items-center gap-2">
-                            Programer · Kolektor Etra
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M13 19q-.425 0-.712-.288T12 18v-8H4q-.425 0-.712-.288T3 9t.288-.712T4 8h9q.425 0 .713.288T14 9v9q0 .425-.288.713T13 19m5-5q-.425 0-.712-.288T17 13V5H9q-.425 0-.712-.288T8 4t.288-.712T9 3h9q.425 0 .713.288T19 4v9q0 .425-.288.713T18 14"/></svg>
+                            Razna študentska dela
                         </h5>
-                        <p class="text-sm leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque omnis, iure rerum ullam unde minima earum quidem doloribus necessitatibus qui, adipisci rem error odit. Fugit neque provident perspiciatis nobis!</p>
-                        <!-- Tags -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap">
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
-                        </ul>
+                        <p class="text-sm leading-normal">Od kar sem lahko delal, sem izkoristil vsako priložnost za zaslužek. Tako sem delal kot natakar, čistilec... Veliko časa pa sem preživel tudi v administraciji, kjer sem urejeval različne Excel tabele in ostale kadrovske in računovodske programe.</p>
                     </div>
-                </a>
+                </div>
                 <a href="/projekti" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
                     Poglej celoten CV
                     <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -287,54 +297,216 @@
                 </a>
             </section>
             <!-- Projects -->
-            <section id="projekti" class="mt-20">
-                <h2 class="title">
-                    <span>03.</span>
-                    Projekti
-                </h2>
-                <div class="project" href="https://github.com" target="_blank">
+            <section id="projekti" class="mt-20 flex flex-col gap-10">
+                <div class="">
+                    <h2 class="title">
+                        <span>03.</span>
+                        Kaj sem ustvaril?
+                    </h2>
+                    <p>
+                        {#if focusedProject}
+                            Kliknite na sliko projekta, da ga zaprete.
+                            {:else}
+                            Kliknite na sliko projekta, da si ga ogledate v celoti.
+                        {/if}
+                    </p>
+                </div>
+                {#if focusedProject == 'GZCelje'}
+                <!-- Image -->
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <div class="flex items-center z-50 relative p-px cursor-pointer" onclick={() => focusedProject = null} transition:slide>
+                    <img src={GZCeljeThumbnail} class="w-1/2 rounded-s h-[22rem] object-contain" alt="">
+                    <img src={GZCelje2} class="w-1/2 rounded-e h-[22rem] object-contain" alt="">
+                </div>
+                {:else}
+                <div class="project" transition:slide>
                     <!-- Image -->
-                    <div class="image">
-                        <a href="">
-                            <img src={KolektorLogo} class="w-full rounded border border-slate-600 p-px" alt="">
-                        </a>
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
+                    <!-- svelte-ignore a11y_no_static_element_interactions -->
+                    <div class="image" onclick={() => focusedProject = 'GZCelje'}>
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                        </div>
+                        <img src={GZCeljeThumbnail} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
                     </div>
                     <!-- Text -->
                     <div class="text-container">
                         <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
-                            Zbirka vozil
+                            Aplikacija za Geodetski zavod Celje
                         </h5>
                         <div class="text">
-                            <p class="text-sm leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque omnis, iure rerum ullam unde minima earum quidem doloribus necessitatibus qui, adipisci rem!</p>
+                            <p class="text-sm leading-normal">
+                                Za Geodetksi zavod Celje sem prenovil "frontend" njihove interne aplikacije. Uporabil sem JavaScript framework <span>SvelteKit</span> in <span>Tailwind CSS</span>. Komunikacija s backendom poteka preko <span>REST API-ja</span>. Implementiral sem tudi avtentikacijo preko <span>JWT</span> žetonov.
+                            </p>
                         </div>
                         <!-- Tags -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
-                            <li class="tag">PHP</li>
-                            <li class="tag">PHP</li>
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end w-2/3 ms-auto">
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">Svelte & SvelteKit</li>
+                            <li class="tag">API</li>
+                            <li class="tag">Frontend</li>
+                            <li class="tag">HTML & CSS</li>
                         </ul>
                         <!-- Links -->
                         <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
-                            <li class="hover:text-primary">
-                                <a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from MingCute Icon by MingCute Design - https://github.com/Richard9394/MingCute/blob/main/LICENSE --><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M6.315 6.176c-.25-.638-.24-1.367-.129-2.034a6.8 6.8 0 0 1 2.12 1.07c.28.214.647.283.989.18A9.3 9.3 0 0 1 12 5c.961 0 1.874.14 2.703.391c.342.104.709.034.988-.18a6.8 6.8 0 0 1 2.119-1.07c.111.667.12 1.396-.128 2.033c-.15.384-.075.826.208 1.14C18.614 8.117 19 9.04 19 10c0 2.114-1.97 4.187-5.134 4.818c-.792.158-1.101 1.155-.495 1.726c.389.366.629.882.629 1.456v3a1 1 0 0 0 2 0v-3c0-.57-.12-1.112-.334-1.603C18.683 15.35 21 12.993 21 10c0-1.347-.484-2.585-1.287-3.622c.21-.82.191-1.646.111-2.28c-.071-.568-.17-1.312-.57-1.756c-.595-.659-1.58-.271-2.28-.032a9 9 0 0 0-2.125 1.045A11.4 11.4 0 0 0 12 3c-.994 0-1.953.125-2.851.356a9 9 0 0 0-2.125-1.045c-.7-.24-1.686-.628-2.281.031c-.408.452-.493 1.137-.566 1.719l-.005.038c-.08.635-.098 1.462.112 2.283C3.484 7.418 3 8.654 3 10c0 2.992 2.317 5.35 5.334 6.397A4 4 0 0 0 8 17.98l-.168.034c-.717.099-1.176.01-1.488-.122c-.76-.322-1.152-1.133-1.63-1.753c-.298-.385-.732-.866-1.398-1.088a1 1 0 0 0-.632 1.898c.558.186.944 1.142 1.298 1.566c.373.448.869.916 1.58 1.218c.682.29 1.483.393 2.438.276V21a1 1 0 0 0 2 0v-3c0-.574.24-1.09.629-1.456c.607-.572.297-1.568-.495-1.726C6.969 14.187 5 12.114 5 10c0-.958.385-1.881 1.108-2.684c.283-.314.357-.756.207-1.14"/></g></svg>
+                            <li class="hover:text-primary cursor-pointer">
+                                <a href="https://www.gz-ce.si" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg>
                                 </a>
                             </li>
-                            <li class="hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg></li>
-                            
                         </ul>
                     </div>
                 </div>
+                {/if}
+                {#if focusedProject == 'ZbirkaVozil'}
+                <!-- Image -->
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <div class="flex items-center z-50 relative" onclick={() => focusedProject = null} transition:slide>
+                    <img src={VozilaThumb} class="w-1/2 rounded-s h-[22rem] object-contain" alt="">
+                    <img src={Vozila2} class="w-1/2 rounded-e h-[22rem] object-contain" alt="">
+                </div>
+                {:else}
+                <div class="project project-reversed" transition:slide>
+                    <!-- Image -->
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
+                    <!-- svelte-ignore a11y_no_static_element_interactions -->
+                    <div class="image" onclick={() => focusedProject = 'ZbirkaVozil'}>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                        </div>
+                        <img src={VozilaThumb} class="w-full rounded border border-slate-600 p-px z-10 relative object-contain" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div class="text-container">
+                        <h5 class="leading-8 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                            Scraping celotne baze avto.net
+                        </h5>
+                        <div class="text">
+                            <p class="text-sm leading-normal">
+                                Zaradi frustracij s platformo avto.net sem se odločil stvari vzeti v svoje roke. Napisal sem Python "pajka", ki neopazno zbira podatke o vseh vozilih in jih shranjuje v lokalno bazo. Bazo podatkov ponujam kot plačljivo storitev preko API-ja.
+                            </p>
+                        </div>
+                        <!-- Tags -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap">
+                            <li class="tag">Python</li>
+                            <li class="tag">Scraping</li>
+                            <li class="tag">SQL</li>
+                            <li class="tag">Ubuntu</li>
+                            <li class="tag">API</li>
+                        </ul>
+                        <!-- Links -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
+                            <li class="hover:text-primary cursor-pointer">
+                                <a href="https://baza-vozil.spletne-resitve.com" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {/if}
+                {#if focusedProject == 'MojeLinije'}
+                <!-- Image -->
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <div class="flex items-center z-50 relative" onclick={() => focusedProject = null} transition:slide>
+                    <img src={MojeLinije} class="w-3/4 rounded h-[22rem] object-cover" alt="">
+                </div>
+                {:else}
+                <div class="project" transition:slide>
+                    <!-- Image -->
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
+                    <!-- svelte-ignore a11y_no_static_element_interactions -->
+                    <div class="image" onclick={() => focusedProject = 'MojeLinije'}>
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                        </div>
+                        <img src={MojeLinije} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div class="text-container">
+                        <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                            Moje Linije - načrtovalec poti
+                        </h5>
+                        <div class="text">
+                            <p class="text-sm leading-normal">
+                                <span>"Google Maps za slovenski javni prevoz."</span> Zaradi zastarelega načrtovalca poti podjetja Arriva in Slovenskih železnic sem se odločil, da naredim svojega. Aplikacija omogoča načrtovanje poti z vlakom in avtobusom po celotni Sloveniji. Aplikacijo sem predstavil <span>Ministrstvu za digitalno preobrazbo</span> in dvem <span>podjetniškim inkubatorjema</span>.
+                            </p>
+                        </div>
+                        <!-- Tags -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                            <li class="tag">Python</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">HTMl & CSS</li>
+                        </ul>
+                        <!-- Links -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                            <li class="hover:text-primary cursor-pointer">
+                                <a href="https://github.com/vidpesko/MojeLinije" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {/if}
+                {#if focusedProject == 'Controly'}
+                <!-- Image -->
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <div class="flex items-center z-50 relative w-full" onclick={() => focusedProject = null} transition:slide>
+                    <img src={Controly3} class="w-1/3 rounded-s h-[22rem] object-cover" alt="">
+                    <img src={Controly2} class="w-1/3 rounded-e h-[22rem] object-cover" alt="">
+                    <img src={Controly1} class="w-1/3 h-[22rem] object-cover" alt="">
+                </div>
+                {:else}
+                <div class="project project-reversed" transition:slide>
+                    <!-- Image -->
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
+                    <!-- svelte-ignore a11y_no_static_element_interactions -->
+                    <div class="image" onclick={() => focusedProject = 'Controly'}>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                        </div>
+                        <img src={ControlyThumb} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div class="text-container">
+                        <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                            Controly - LED stopnice
+                        </h5>
+                        <div class="text">
+                            <p class="text-sm leading-normal">
+                                Ob gradnji nove hiše smo se odločili, da bomo po stopnicah namestili LED trakove, ki se prižgejo ob zaznanem gibanju. Ker takega izdelka ni bilo na trgu, sem rabil razviti tako elektronsko kot programsko rešitev. Projekt pa dopolnjuje še aplikacija za nadzor in nastavitev.
+                            </p>
+                        </div>
+                        <!-- Tags -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
+                            <li class="tag">Python</li>
+                            <li class="tag">Arduino</li>
+                            <li class="tag">C++</li>
+                            <li class="tag">Elektronika</li>
+                        </ul>
+                        <!-- Links -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
+                            <li class="hover:text-primary cursor-pointer">
+                                <a href="https://github.com/vidpesko/Controly" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {/if}
 
                 <a href="/projekti" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
-                    Poglej vse projekte
+                    Poglej arhiv projektov
                     <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                     </svg>
                 </a>
             </section>
 
-            <p class="mt-20 text-sm text-slate-500">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fugiat fuga id sequi quo veniam ut, ea esse et distinctio adipisci, unde minima neque quibusdam maxime molestias enim, dolore vitae!
+            <p class="mt-20 text-sm text-slate-500 w-2/3">
+                Oblikovan v <span class="text-slate-400">Figmi</span> in sprogramirano v <span class="text-slate-400">Visual Studio Code</span> s ❤️. Izdelano v <span class="text-slate-400">Svelte frameworku</span> s uporabo <span class="text-slate-400">Tailwind CSS</span>-ja. Obisk spletne strani omogoča custom <span class="text-slate-400">Ubunutu strežnik s NGINX</span>.
             </p>
         </main>
     </div>
