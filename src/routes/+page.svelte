@@ -69,7 +69,7 @@
             <div class="">
                 <h1 class="text-5xl font-bold tracking-tight text-slate-200">Vid Pesko</h1>
                 <h2 class="text-xl mt-3 text-slate-200 tracking-tight">Programer</h2>
-                <p class="max-w-xs mt-4">Mladi programer</p>
+                <p class="max-w-xs mt-4">Mladi full-stack programer z velikimi željami.</p>
                 <!-- Personal info -->
                 <ul class="mt-8 text-sm personal-info">
                     <li>
@@ -138,7 +138,7 @@
                     </li>
                 </ul>
 
-                <a href="" class="cv-btn overflow-hidden mt-2 border border-slate-400 hover:border-slate-200 px-4 py-1.5 rounded-lg hover:text-slate-200 transition duration-200 flex relative items-center gap-2 text-sm pe-10 cursor-pointer w-fit">
+                <a href="./cv.pdf" target="_blank" class="cv-btn overflow-hidden mt-2 border border-slate-400 hover:border-slate-200 px-4 py-1.5 rounded-lg hover:text-slate-200 transition duration-200 flex relative items-center gap-2 text-sm pe-10 cursor-pointer w-fit">
                     Prenesi CV
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 absolute right-2 top-1" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 15.575q-.2 0-.375-.062T11.3 15.3l-3.6-3.6q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L11 12.15V5q0-.425.288-.712T12 4t.713.288T13 5v7.15l1.875-1.875q.3-.3.713-.288t.712.313q.275.3.288.7t-.288.7l-3.6 3.6q-.15.15-.325.213t-.375.062M6 20q-.825 0-1.412-.587T4 18v-2q0-.425.288-.712T5 15t.713.288T6 16v2h12v-2q0-.425.288-.712T19 15t.713.288T20 16v2q0 .825-.587 1.413T18 20z"/></svg>
                 </a>
@@ -154,16 +154,23 @@
                 </h2>
                 <div class="flex gap-6">
                     <div class="flex flex-col gap-6 leading-7 w-2/3">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam inventore omnis odit qui, similique optio non, rem, vero porro aliquid. Similique blanditiis sed minima est? Iusto nostrum explicabo voluptatibus.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam inventore omnis odit qui, similique optio non, rem, vero porro aliquid. Similique blanditiis sed minima est? Iusto nostrum explicabo voluptatibus.</p>
+                        <p>
+                            Sem mladi razvijalec, ki ga veseli ustvarjanje spletnih aplikacij, kjer se srečata dizajn in funkcionalnost. Rad gradim stvari, ki niso le lepe na pogled, ampak tudi delujejo hitro in so enostavne za uporabnike.
+                        </p>
+                        <p>
+                            Do zdaj sem delal na različnih manjših in tudi že na nekaj večjih projektih - od razvijanja API-jev za <a href="https://baza-vozil.spletne-resitve.com" class="hover:text-primary text-slate-200 transition duration-200">znane slovenske platforme</a>, do razvoja spletnih vmesnikov za podjetja.
+                        </p>
+                        <p>
+                            V prostem času rad kolesarim in "fitnesiram", ali pa se preiskušam v ostalih športih in raznovrstnih hobijih.
+                        </p>
                     </div>
                     <div class="relative w-1/3 group">
-                        <div class="w-full h-full border-primary border-4 rounded-lg absolute top-4 left-4 z-10 group-hover:top-0 group-hover:left-0 transition-all duration-200"></div>
-                        <img src={JazImg} alt="Jaz" class="rounded-lg w-full z-30 relative group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-200">
+                        <div class="w-full h-72 border-primary border-4 rounded-lg absolute top-4 left-4 z-10 group-hover:top-0 group-hover:left-0 transition-all duration-200"></div>
+                        <img src={JazImg} alt="Jaz" class="rounded-lg w-full h-72 object-cover z-30 relative group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-200">
                     </div>
                 </div>
                 <!-- Skills -->
-                <div class="grid grid-cols-3 gap-y-4 w-2/3">
+                <div class="grid grid-cols-3 gap-y-4 w-2/3 mt-4">
                     <div class="">
                         <p class="text-slate-200 flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32"><!-- Icon from VSCode Icons by Roberto Huertas - https://github.com/vscode-icons/vscode-icons/blob/master/LICENSE --><defs><linearGradient id="vscodeIconsFileTypePython0" x1="-133.268" x2="-133.198" y1="-202.91" y2="-202.84" gradientTransform="matrix(189.38 0 0 189.81 25243.061 38519.17)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#387eb8"/><stop offset="1" stop-color="#366994"/></linearGradient><linearGradient id="vscodeIconsFileTypePython1" x1="-133.575" x2="-133.495" y1="-203.203" y2="-203.133" gradientTransform="matrix(189.38 0 0 189.81 25309.061 38583.42)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe052"/><stop offset="1" stop-color="#ffc331"/></linearGradient></defs><path fill="url(#vscodeIconsFileTypePython0)" d="M15.885 2.1c-7.1 0-6.651 3.07-6.651 3.07v3.19h6.752v1H6.545S2 8.8 2 16.005s4.013 6.912 4.013 6.912H8.33v-3.361s-.13-4.013 3.9-4.013h6.762s3.772.06 3.772-3.652V5.8s.572-3.712-6.842-3.712Zm-3.732 2.137a1.214 1.214 0 1 1-1.183 1.244v-.02a1.214 1.214 0 0 1 1.214-1.214Z"/><path fill="url(#vscodeIconsFileTypePython1)" d="M16.085 29.91c7.1 0 6.651-3.08 6.651-3.08v-3.18h-6.751v-1h9.47S30 23.158 30 15.995s-4.013-6.912-4.013-6.912H23.64V12.4s.13 4.013-3.9 4.013h-6.765S9.2 16.356 9.2 20.068V26.2s-.572 3.712 6.842 3.712h.04Zm3.732-2.147A1.214 1.214 0 1 1 21 26.519v.03a1.214 1.214 0 0 1-1.214 1.214z"/></svg>
@@ -200,7 +207,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24">Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE<path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zm3.15.45l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15zm0-5.025"/></svg>
                         </div>
                     </div>
                     <div class="">
@@ -289,7 +297,7 @@
                         <p class="text-sm leading-normal">Od kar sem lahko delal, sem izkoristil vsako priložnost za zaslužek. Tako sem delal kot natakar, čistilec... Veliko časa pa sem preživel tudi v administraciji, kjer sem urejeval različne Excel tabele in ostale kadrovske in računovodske programe.</p>
                     </div>
                 </div>
-                <a href="/projekti" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
+                <a href="./cv.pdf" target="_blank" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
                     Poglej celoten CV
                     <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
@@ -497,7 +505,7 @@
                 </div>
                 {/if}
 
-                <a href="/projekti" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
+                <a href="https://github.com/vidpesko?tab=repositories" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
                     Poglej arhiv projektov
                     <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
