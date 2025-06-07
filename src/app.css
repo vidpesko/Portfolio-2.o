@@ -40,7 +40,7 @@
 
 /* Social */
 .social-icons {
-    @apply flex gap-4 mt-8 text-slate-400;
+    @apply flex gap-4 mt-4 mb-4 md:mb-0 xl:mt-8 text-slate-400;
 }
 
 .social-icons a {
@@ -105,12 +105,12 @@
 
 .title::after {
     content: "";
-    @apply relative ms-6 w-60 h-px bg-slate-500/40 rounded-full;
+    @apply relative ms-6 w-60 h-px bg-slate-500/40 rounded-full md:block hidden;
 }
 
 /* Experience */
 .custom-block {
-    @apply flex gap-8 items-start p-6  border-t-1 border-white/0 transition-all duration-200 mb-4;
+    @apply md:flex gap-8 items-start mt-6 md:mt-0 md:p-6  border-t-1 border-white/0 transition-all duration-200 mb-4;
 }
 
 .custom-block p span {
@@ -126,7 +126,7 @@
 }
 
 .custom-block:hover {
-    @apply isolate rounded bg-white/4 shadow-lg ring-2 ring-white/5 border-white/5;
+    @apply isolate rounded md:bg-white/4 md:shadow-lg md:ring-2 md:ring-white/5 md:border-white/5;
 }
 
 .custom-block:hover h5 {
@@ -143,15 +143,15 @@
 
 /* Projects */
 .project {
-    @apply grid grid-cols-12 gap-2 grid-rows-1 relative;
+    @apply md:grid grid-cols-11 gap-2 grid-rows-1 relative;
 }
 
 .project .image {
-    @apply col-start-1 col-end-7 z-10 relative cursor-pointer;
+    @apply col-start-1 col-end-7 z-10 relative cursor-pointer hidden md:block;
 }
 
 .project .text-container {
-    @apply col-start-5 col-end-12 z-20 absolute text-end top-1/2 -translate-y-1/2;
+    @apply col-start-5 col-end-12 z-20 md:absolute text-end top-1/2 -translate-y-1/2;
 }
 
 .project .text {

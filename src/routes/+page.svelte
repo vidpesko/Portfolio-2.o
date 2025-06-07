@@ -63,9 +63,9 @@
     </div>
 
     <!-- Outer container -->
-    <div class="max-w-7xl mx-auto flex justify-between font-primary min-h-screen">
+    <div class="max-w-7xl mx-auto xl:flex justify-between font-primary min-h-screen">
         <!-- Left side / personal info -->
-        <header class="sticky w-1/3 top-0 flex flex-col justify-between h-screen pt-24 pb-16">
+        <header class="sticky w-1/3 top-0 xl:flex flex-col justify-between h-screen pt-24 pb-16 hidden">
             <div class="">
                 <h1 class="text-5xl font-bold tracking-tight text-slate-200">Vid Pesko</h1>
                 <h2 class="text-xl mt-3 text-slate-200 tracking-tight">Programer</h2>
@@ -145,15 +145,62 @@
             </div>
         </header>
         <!-- Right side / description, projects, etc. -->
-        <main class="py-24 w-2/3">
+        <main class="py-4 md:py-12 xl:py-24 w-full px-4 md:px-12 xl:px-0 xl:w-2/3">
             <!-- About me -->
             <section id="omeni" class="">
+                <!-- Contact (if width < xl) -->
+                <div class="xl:hidden">
+                    <h1 class="text-5xl font-bold tracking-tight text-slate-200">Vid Pesko</h1>
+                    <h2 class="text-xl mt-3 text-slate-200 tracking-tight">Programer</h2>
+                    <!-- Personal info -->
+                    <ul class="my-4 text-sm personal-info">
+                        <li>
+                            <a href="tel:+38664182101" class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M19.95 21q-3.225 0-6.287-1.438t-5.425-3.8q-2.363-2.362-3.8-5.425T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.225t.325.575l.65 3.5q.05.35-.013.638T9.4 8.45L6.975 10.9q1.05 1.8 2.638 3.375T13.1 17l2.35-2.35q.225-.225.588-.338t.712-.062l3.45.7q.35.075.575.338T21 15.9v4.05q0 .45-.3.75t-.75.3ZM6.025 9l1.65-1.65L7.25 5H5.025q.125 1.025.35 2.025T6.025 9ZM19 18.95v-2.2l-2.35-.475l-1.675 1.675q.975.425 1.987.675T19 18.95Zm-4-1.025ZM6.025 9Z"/></svg>
+                                064 182 101 
+                            </a>
+                        </li>
+                        <li class="my-2">
+                            <a href="mailto:vid@pesko.si" class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zM20 8l-7.475 4.675q-.125.075-.262.113t-.263.037t-.262-.037t-.263-.113L4 8v10h16zm-8 3l8-5H4zM4 8v.25v-1.475v.025V6v.8v-.012V8.25zv10z"/></svg>
+                                vid@pesko.si
+                            </a>
+                        </li>
+                        <li>
+                            <p class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M6 19h3v-5q0-.425.288-.712T10 13h4q.425 0 .713.288T15 14v5h3v-9l-6-4.5L6 10zm-2 0v-9q0-.475.213-.9t.587-.7l6-4.5q.525-.4 1.2-.4t1.2.4l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-4q-.425 0-.712-.288T13 20v-5h-2v5q0 .425-.288.713T10 21H6q-.825 0-1.412-.587T4 19m8-6.75"/></svg>
+                                Partizanska pot 17, 4000 Kranj, Slovenija
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul class="social-icons">
+                        <li>
+                            <!-- svelte-ignore a11y_invalid_attribute -->
+                            <a href="https://github.com/vidpesko">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt --><mask id="lineMdGithubLoop0" width="24" height="24" x="0" y="0"><g fill="#fff"><ellipse cx="9.5" cy="9" rx="1.5" ry="1"/><ellipse cx="14.5" cy="9" rx="1.5" ry="1"/></g></mask><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="32" stroke-dashoffset="32" d="M12 4c1.67 0 2.61 0.4 3 0.5c0.53 -0.43 1.94 -1.5 3.5 -1.5c0.34 1 0.29 2.22 0 3c0.75 1 1 2 1 3.5c0 2.19 -0.48 3.58 -1.5 4.5c-1.02 0.92 -2.11 1.37 -3.5 1.5c0.65 0.54 0.5 1.87 0.5 2.5c0 0.73 0 3 0 3M12 4c-1.67 0 -2.61 0.4 -3 0.5c-0.53 -0.43 -1.94 -1.5 -3.5 -1.5c-0.34 1 -0.29 2.22 0 3c-0.75 1 -1 2 -1 3.5c0 2.19 0.48 3.58 1.5 4.5c1.02 0.92 2.11 1.37 3.5 1.5c-0.65 0.54 -0.5 1.87 -0.5 2.5c0 0.73 0 3 0 3"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.7s" values="32;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5"><animate attributeName="d" dur="3s" repeatCount="indefinite" values="M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5;M9 19c-1.406 0-3-.5-4-.5-.532 0-1 0-2-.5;M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.8s" dur="0.2s" values="10;0"/></path></g><rect width="8" height="4" x="8" y="11" fill="currentColor" mask="url(#lineMdGithubLoop0)"><animate attributeName="y" dur="10s" keyTimes="0;0.45;0.46;0.54;0.55;1" repeatCount="indefinite" values="11;11;7;7;11;11"/></rect></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- svelte-ignore a11y_invalid_attribute -->
+                            <a href="https://www.instagram.com/vidpesko/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt --><circle cx="17" cy="7" r="1.5" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="1.3s" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="72" stroke-dashoffset="72" d="M16 3c2.76 0 5 2.24 5 5v8c0 2.76 -2.24 5 -5 5h-8c-2.76 0 -5 -2.24 -5 -5v-8c0 -2.76 2.24 -5 5 -5h4Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="72;0"/></path><path stroke-dasharray="28" stroke-dashoffset="28" d="M12 8c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.6s" values="28;0"/></path></g></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- svelte-ignore a11y_invalid_attribute -->
+                            <a href="mailto:vid@pesko.si">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path></g></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <h2 class="title">
                     <span>01.</span>
                     O Meni
                 </h2>
                 <div class="flex gap-6">
-                    <div class="flex flex-col gap-6 leading-7 w-2/3">
+                    <div class="flex flex-col gap-6 leading-7 w-full md:w-2/3">
                         <p>
                             Sem mladi razvijalec, ki ga veseli ustvarjanje spletnih aplikacij, kjer se srečata dizajn in funkcionalnost. Rad gradim stvari, ki niso le lepe na pogled, ampak tudi delujejo hitro in so enostavne za uporabnike.
                         </p>
@@ -164,13 +211,13 @@
                             V prostem času rad kolesarim in "fitnesiram", ali pa se preiskušam v ostalih športih in raznovrstnih hobijih.
                         </p>
                     </div>
-                    <div class="relative w-1/3 group">
+                    <div class="relative w-1/3 group hidden md:block">
                         <div class="w-full h-72 border-primary border-4 rounded-lg absolute top-4 left-4 z-10 group-hover:top-0 group-hover:left-0 transition-all duration-200"></div>
                         <img src={JazImg} alt="Jaz" class="rounded-lg w-full h-72 object-cover z-30 relative group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-200">
                     </div>
                 </div>
                 <!-- Skills -->
-                <div class="grid grid-cols-3 gap-y-4 w-2/3 mt-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-y-4 md:gap-y-4 md:w-2/3 mt-4">
                     <div class="">
                         <p class="text-slate-200 flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32"><!-- Icon from VSCode Icons by Roberto Huertas - https://github.com/vscode-icons/vscode-icons/blob/master/LICENSE --><defs><linearGradient id="vscodeIconsFileTypePython0" x1="-133.268" x2="-133.198" y1="-202.91" y2="-202.84" gradientTransform="matrix(189.38 0 0 189.81 25243.061 38519.17)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#387eb8"/><stop offset="1" stop-color="#366994"/></linearGradient><linearGradient id="vscodeIconsFileTypePython1" x1="-133.575" x2="-133.495" y1="-203.203" y2="-203.133" gradientTransform="matrix(189.38 0 0 189.81 25309.061 38583.42)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe052"/><stop offset="1" stop-color="#ffc331"/></linearGradient></defs><path fill="url(#vscodeIconsFileTypePython0)" d="M15.885 2.1c-7.1 0-6.651 3.07-6.651 3.07v3.19h6.752v1H6.545S2 8.8 2 16.005s4.013 6.912 4.013 6.912H8.33v-3.361s-.13-4.013 3.9-4.013h6.762s3.772.06 3.772-3.652V5.8s.572-3.712-6.842-3.712Zm-3.732 2.137a1.214 1.214 0 1 1-1.183 1.244v-.02a1.214 1.214 0 0 1 1.214-1.214Z"/><path fill="url(#vscodeIconsFileTypePython1)" d="M16.085 29.91c7.1 0 6.651-3.08 6.651-3.08v-3.18h-6.751v-1h9.47S30 23.158 30 15.995s-4.013-6.912-4.013-6.912H23.64V12.4s.13 4.013-3.9 4.013h-6.765S9.2 16.356 9.2 20.068V26.2s-.572 3.712 6.842 3.712h.04Zm3.732-2.147A1.214 1.214 0 1 1 21 26.519v.03a1.214 1.214 0 0 1-1.214 1.214z"/></svg>
@@ -260,10 +307,10 @@
                 </h2>
                 <a class="experience custom-block" href="https://kolektor-etra.si" target="_blank">
                     <!-- Time range & img -->
-                    <div class="w-1/8">
+                    <div class="md:w-1/8">
                         <p class="flex items-center text-sm">Poletje 2024</p>
 
-                        <img src={KolektorLogo} alt="" class="mt-4 rounded">
+                        <img src={KolektorLogo} alt="" class="mt-4 rounded hidden md:block">
                     </div>
                     <!-- Company / job info -->
                     <div class="w-7/8">
@@ -284,7 +331,7 @@
                 </a>
                 <div class="experience custom-block">
                     <!-- Time range & img -->
-                    <div class="w-1/8">
+                    <div class="md:w-1/8">
                         <p class="flex items-center text-sm">2021 <span class="h-px w-4 bg-slate-400 mx-2"></span> 2024</p>
 
                         <!-- <img src={KolektorLogo} alt="" class="mt-4 rounded"> -->
@@ -305,13 +352,13 @@
                 </a>
             </section>
             <!-- Projects -->
-            <section id="projekti" class="mt-20 flex flex-col gap-10">
+            <section id="projekti" class="mt-32 md:mt-20 flex flex-col gap-10">
                 <div class="">
                     <h2 class="title">
                         <span>03.</span>
                         Kaj sem ustvaril?
                     </h2>
-                    <p>
+                    <p class="hidden md:block">
                         {#if focusedProject}
                             Kliknite na sliko projekta, da ga zaprete.
                             {:else}
@@ -432,7 +479,7 @@
                     </div>
                     <!-- Text -->
                     <div class="text-container">
-                        <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                        <h5 class="leading-6 text-slate-200 mb-6 w-full text-3xl font-semibold">
                             Moje Linije - načrtovalec poti
                         </h5>
                         <div class="text">
@@ -505,7 +552,7 @@
                 </div>
                 {/if}
 
-                <a href="https://github.com/vidpesko?tab=repositories" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
+                <a href="https://github.com/vidpesko?tab=repositories" target="_blank" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
                     Poglej arhiv projektov
                     <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
@@ -513,7 +560,7 @@
                 </a>
             </section>
 
-            <p class="mt-20 text-sm text-slate-500 w-2/3">
+            <p class="mt-20 text-sm text-slate-500 text-center md:text-start md:w-2/3">
                 Oblikovan v <span class="text-slate-400">Figmi</span> in sprogramirano v <span class="text-slate-400">Visual Studio Code</span> s ❤️. Izdelano v <span class="text-slate-400">Svelte frameworku</span> s uporabo <span class="text-slate-400">Tailwind CSS</span>-ja. Obisk spletne strani omogoča custom <span class="text-slate-400">Ubunutu strežnik s NGINX</span>.
             </p>
         </main>
