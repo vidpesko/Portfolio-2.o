@@ -136,6 +136,12 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path></g></svg>
                         </a>
                     </li>
+                    <li>
+                        <!-- svelte-ignore a11y_invalid_attribute -->
+                        <a href="https://www.youtube.com/@vidpesko4919">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512"><!-- Icon from IonIcons by Ben Sperry - https://github.com/ionic-team/ionicons/blob/main/LICENSE --><path fill="currentColor" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>
+                        </a>
+                    </li>
                 </ul>
 
                 <a href="./cv.pdf" target="_blank" class="cv-btn overflow-hidden mt-2 border border-slate-400 hover:border-slate-200 px-4 py-1.5 rounded-lg hover:text-slate-200 transition duration-200 flex relative items-center gap-2 text-sm pe-10 cursor-pointer w-fit">
@@ -287,7 +293,7 @@
                     <div class="">
                         <p class="text-slate-200 flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 16 16"><!-- Icon from Codicons by Microsoft Corporation - https://github.com/microsoft/vscode-codicons/blob/main/LICENSE --><g fill="currentColor"><path d="m10.875 7l2.008 5h-.711l-2.008-5zm-5.125.594q-.414 0-.75.125a1.54 1.54 0 0 0-.578.375q-.243.25-.375.61a2.4 2.4 0 0 0-.133.827q0 .43.117.781t.352.594q.234.243.57.383q.337.14.766.133a2.6 2.6 0 0 0 .992-.195l.125.484a2 2 0 0 1-.492.148a4.4 4.4 0 0 1-.75.07a2.6 2.6 0 0 1-.914-.156a2.2 2.2 0 0 1-.742-.453a1.9 1.9 0 0 1-.485-.742a3.2 3.2 0 0 1-.18-1.023q0-.547.18-1t.5-.782q.32-.328.774-.507a2.7 2.7 0 0 1 1-.18q.445 0 .718.07q.274.07.399.14l-.149.493a2 2 0 0 0-.406-.14a2.4 2.4 0 0 0-.539-.055M8 8h1v1H8zm0 2h1v1H8z"/><path d="M15.5 1H.5l-.5.5v13l.5.5h15l.5-.5v-13zM15 14H1V5h14zm0-10H1V2h14z"/></g></svg>
-                            Linux & CMD
+                            Linux & Bash skripte
                         </p>
                         <div class="flex mt-1">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
@@ -402,14 +408,6 @@
                             <li class="tag">Frontend</li>
                             <li class="tag">HTML & CSS</li>
                         </ul>
-                        <!-- Links -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
-                            <li class="hover:text-primary cursor-pointer">
-                                <a href="https://www.gz-ce.si" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 {/if}
@@ -434,26 +432,27 @@
                     <!-- Text -->
                     <div class="text-container">
                         <h5 class="leading-8 text-slate-200 mb-6 w-full text-3xl font-semibold">
-                            Scraping celotne baze avto.net
+                            Aktualna zbirka rabljenih vozil
                         </h5>
                         <div class="text">
                             <p class="text-sm leading-normal">
-                                Zaradi frustracij s platformo avto.net sem se odločil stvari vzeti v svoje roke. Napisal sem Python "pajka", ki neopazno zbira podatke o vseh vozilih in jih shranjuje v lokalno bazo. Bazo podatkov ponujam kot plačljivo storitev preko API-ja.
+                                Baza preko <span>60.000</span> osebnih, gospodarskih in motornih vozil na slovenskem trgu. Bazo podatkov ponujam kot plačljivo storitev preko API-ja in imam dve stranki.
                             </p>
                         </div>
                         <!-- Tags -->
                         <ul class="flex items-center gap-2 mt-4 flex-wrap">
                             <li class="tag">Python</li>
+                            <li class="tag">Selenium</li>
                             <li class="tag">Scraping</li>
                             <li class="tag">SQL</li>
-                            <li class="tag">Ubuntu</li>
                             <li class="tag">API</li>
                         </ul>
                         <!-- Links -->
                         <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
                             <li class="hover:text-primary cursor-pointer">
-                                <a href="https://baza-vozil.spletne-resitve.com" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg>
+                                <a href="https://baza-vozil.spletne-resitve.com" target="_blank" class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg>
+                                    Poglej podrobno
                                 </a>
                             </li>
                         </ul>
@@ -496,8 +495,9 @@
                         <!-- Links -->
                         <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
                             <li class="hover:text-primary cursor-pointer">
-                                <a href="https://github.com/vidpesko/MojeLinije" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                <a href="https://github.com/vidpesko/MojeLinije" target="_blank" class="flex items-center gap-2">
+                                    Poglej podrobno
+                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
                                 </a>
                             </li>
                         </ul>
@@ -543,14 +543,52 @@
                         <!-- Links -->
                         <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
                             <li class="hover:text-primary cursor-pointer">
-                                <a href="https://github.com/vidpesko/Controly" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                <a href="https://github.com/vidpesko/Controly" target="_blank" class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                    Poglej podrobno
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 {/if}
+
+                <div class="project">
+                    <!-- Image -->
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
+                    <!-- svelte-ignore a11y_no_static_element_interactions -->
+                    <div class="image">
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                        </div>
+                        <img src={MojeLinije} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div class="text-container">
+                        <h5 class="leading-6 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                            Video in foto montaža
+                        </h5>
+                        <div class="text">
+                            <p class="text-sm leading-normal">
+                                <span>"Google Maps za slovenski javni prevoz."</span> Zaradi zastarelega načrtovalca poti podjetja Arriva in Slovenskih železnic sem se odločil, da naredim svojega. Aplikacija omogoča načrtovanje poti z vlakom in avtobusom po celotni Sloveniji. Aplikacijo sem predstavil <span>Ministrstvu za digitalno preobrazbo</span> in dvem <span>podjetniškim inkubatorjema</span>.
+                            </p>
+                        </div>
+                        <!-- Tags -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                            <li class="tag">Python</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">HTMl & CSS</li>
+                        </ul>
+                        <!-- Links -->
+                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                            <li class="hover:text-primary cursor-pointer">
+                                <a href="https://www.youtube.com/@vidpesko4919" target="_blank" class="flex items-center gap-2">
+                                    Povezava do YouTube kanala
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 512 512"><!-- Icon from IonIcons by Ben Sperry - https://github.com/ionic-team/ionicons/blob/main/LICENSE --><path fill="currentColor" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
                 <a href="https://github.com/vidpesko?tab=repositories" target="_blank" class="flex items-center gap-2 mt-6 text-slate-200 hover:text-primary transition duration-200 group">
                     Poglej arhiv projektov
