@@ -253,7 +253,7 @@
                     <div class="">
                         <p class="text-slate-200 flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32"><!-- Icon from VSCode Icons by Roberto Huertas - https://github.com/vscode-icons/vscode-icons/blob/master/LICENSE --><path fill="#ff3e00" d="M26.47 5.7a8.973 8.973 0 0 0-11.793-2.454L7.96 7.4a7.46 7.46 0 0 0-3.481 5.009a7.7 7.7 0 0 0 .8 5.058a7.4 7.4 0 0 0-1.151 2.8a7.8 7.8 0 0 0 1.4 6.028a8.977 8.977 0 0 0 11.794 2.458L24.04 24.6a7.47 7.47 0 0 0 3.481-5.009a7.67 7.67 0 0 0-.8-5.062a7.35 7.35 0 0 0 1.152-2.8A7.8 7.8 0 0 0 26.47 5.7"/><path fill="#fff" d="M14.022 26.64A5.41 5.41 0 0 1 8.3 24.581a4.68 4.68 0 0 1-.848-3.625a4 4 0 0 1 .159-.61l.127-.375l.344.238a8.8 8.8 0 0 0 2.628 1.274l.245.073l-.025.237a1.44 1.44 0 0 0 .271.968a1.63 1.63 0 0 0 1.743.636a1.5 1.5 0 0 0 .411-.175l6.7-4.154a1.37 1.37 0 0 0 .633-.909a1.4 1.4 0 0 0-.244-1.091a1.63 1.63 0 0 0-1.726-.622a1.5 1.5 0 0 0-.413.176l-2.572 1.584a5 5 0 0 1-1.364.582a5.415 5.415 0 0 1-5.727-2.06a4.68 4.68 0 0 1-.831-3.628A4.5 4.5 0 0 1 9.9 10.09l6.708-4.154a5 5 0 0 1 1.364-.581A5.41 5.41 0 0 1 23.7 7.414a4.68 4.68 0 0 1 .848 3.625a4 4 0 0 1-.159.61l-.127.375l-.344-.237a8.7 8.7 0 0 0-2.628-1.274l-.245-.074l.025-.237a1.44 1.44 0 0 0-.272-.968a1.63 1.63 0 0 0-1.725-.622a1.5 1.5 0 0 0-.411.176l-6.722 4.14a1.35 1.35 0 0 0-.631.908a1.4 1.4 0 0 0 .244 1.092a1.63 1.63 0 0 0 1.726.621a1.5 1.5 0 0 0 .413-.175l2.562-1.585a4.9 4.9 0 0 1 1.364-.581a5.42 5.42 0 0 1 5.728 2.059a4.68 4.68 0 0 1 .843 3.625a4.5 4.5 0 0 1-2.089 3.013l-6.707 4.154a4.9 4.9 0 0 1-1.364.581"/></svg>
-                            Svelte (Kit)
+                            SvelteKit (Node.js)
                         </p>
                         <div class="flex mt-1">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-200" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
@@ -358,7 +358,7 @@
                 </a>
             </section>
             <!-- Projects -->
-            <section id="projekti" class="mt-32 md:mt-20 flex flex-col gap-10">
+            <section id="projekti" class="mt-32 md:mt-20">
                 <div class="">
                     <h2 class="title">
                         <span>03.</span>
@@ -372,221 +372,224 @@
                         {/if}
                     </p>
                 </div>
-                {#if focusedProject == 'GZCelje'}
-                <!-- Image -->
-                <!-- svelte-ignore a11y_click_events_have_key_events -->
-                <!-- svelte-ignore a11y_no_static_element_interactions -->
-                <div class="flex items-center z-50 relative p-px cursor-pointer" onclick={() => focusedProject = null} transition:slide>
-                    <img src={GZCeljeThumbnail} class="w-1/2 rounded-s h-[22rem] object-contain" alt="">
-                    <img src={GZCelje2} class="w-1/2 rounded-e h-[22rem] object-contain" alt="">
-                </div>
-                {:else}
-                <div class="project" transition:slide>
+                
+                <div class="relative mt-40 md:mt-10 flex flex-col gap-10">
+                    {#if focusedProject == 'GZCelje'}
                     <!-- Image -->
                     <!-- svelte-ignore a11y_click_events_have_key_events -->
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="image" onclick={() => focusedProject = 'GZCelje'}>
-                        <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
-                        </div>
-                        <img src={GZCeljeThumbnail} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
+                    <div class="flex items-center z-50 relative p-px cursor-pointer" onclick={() => focusedProject = null} transition:slide>
+                        <img src={GZCeljeThumbnail} class="w-1/2 rounded-s h-[22rem] object-contain" alt="">
+                        <img src={GZCelje2} class="w-1/2 rounded-e h-[22rem] object-contain" alt="">
                     </div>
-                    <!-- Text -->
-                    <div class="text-container">
-                        <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
-                            Aplikacija za Geodetski zavod Celje
-                        </h5>
-                        <div class="text">
-                            <p class="text-sm leading-normal">
-                                Za Geodetksi zavod Celje sem prenovil "frontend" njihove interne aplikacije. Uporabil sem JavaScript framework <span>SvelteKit</span> in <span>Tailwind CSS</span>. Komunikacija s backendom poteka preko <span>REST API-ja</span>. Implementiral sem tudi avtentikacijo preko <span>JWT</span> žetonov.
-                            </p>
+                    {:else}
+                    <div class="project" transition:slide>
+                        <!-- Image -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <div class="image" onclick={() => focusedProject = 'GZCelje'}>
+                            <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                            </div>
+                            <img src={GZCeljeThumbnail} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
                         </div>
-                        <!-- Tags -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end w-2/3 ms-auto">
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">Svelte & SvelteKit</li>
-                            <li class="tag">API</li>
-                            <li class="tag">Frontend</li>
-                            <li class="tag">HTML & CSS</li>
-                        </ul>
+                        <!-- Text -->
+                        <div class="text-container">
+                            <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                                Aplikacija za Geodetski zavod Celje
+                            </h5>
+                            <div class="text">
+                                <p class="text-sm leading-normal">
+                                    Za Geodetksi zavod Celje sem prenovil "frontend" njihove interne aplikacije. Uporabil sem JavaScript framework <span>SvelteKit</span> in <span>Tailwind CSS</span>. Komunikacija s backendom poteka preko <span>REST API-ja</span>. Implementiral sem tudi avtentikacijo preko <span>JWT</span> žetonov.
+                                </p>
+                            </div>
+                            <!-- Tags -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end w-2/3 ms-auto">
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">Svelte & SvelteKit</li>
+                                <li class="tag">API</li>
+                                <li class="tag">Frontend</li>
+                                <li class="tag">HTML & CSS</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                {/if}
-                {#if focusedProject == 'ZbirkaVozil'}
-                <!-- Image -->
-                <!-- svelte-ignore a11y_click_events_have_key_events -->
-                <!-- svelte-ignore a11y_no_static_element_interactions -->
-                <div class="flex items-center z-50 relative" onclick={() => focusedProject = null} transition:slide>
-                    <img src={VozilaThumb} class="w-1/2 rounded-s h-[22rem] object-contain" alt="">
-                    <img src={Vozila2} class="w-1/2 rounded-e h-[22rem] object-contain" alt="">
-                </div>
-                {:else}
-                <div class="project project-reversed" transition:slide>
+                    {/if}
+                    {#if focusedProject == 'ZbirkaVozil'}
                     <!-- Image -->
                     <!-- svelte-ignore a11y_click_events_have_key_events -->
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="image" onclick={() => focusedProject = 'ZbirkaVozil'}>
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
-                        </div>
-                        <img src={VozilaThumb} class="w-full rounded border border-slate-600 p-px z-10 relative object-contain" alt="">
+                    <div class="flex items-center z-50 relative" onclick={() => focusedProject = null} transition:slide>
+                        <img src={VozilaThumb} class="w-1/2 rounded-s h-[22rem] object-contain" alt="">
+                        <img src={Vozila2} class="w-1/2 rounded-e h-[22rem] object-contain" alt="">
                     </div>
-                    <!-- Text -->
-                    <div class="text-container">
-                        <h5 class="leading-8 text-slate-200 mb-6 w-full text-3xl font-semibold">
-                            Aktualna zbirka rabljenih vozil
-                        </h5>
-                        <div class="text">
-                            <p class="text-sm leading-normal">
-                                Baza preko <span>60.000</span> osebnih, gospodarskih in motornih vozil na slovenskem trgu. Bazo podatkov ponujam kot plačljivo storitev preko API-ja in imam dve stranki.
-                            </p>
+                    {:else}
+                    <div class="project project-reversed" transition:slide>
+                        <!-- Image -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <div class="image" onclick={() => focusedProject = 'ZbirkaVozil'}>
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                            </div>
+                            <img src={VozilaThumb} class="w-full rounded border border-slate-600 p-px z-10 relative object-contain" alt="">
                         </div>
-                        <!-- Tags -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap">
-                            <li class="tag">Python</li>
-                            <li class="tag">Selenium</li>
-                            <li class="tag">Scraping</li>
-                            <li class="tag">SQL</li>
-                            <li class="tag">API</li>
-                        </ul>
-                        <!-- Links -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
-                            <li class="hover:text-primary cursor-pointer">
-                                <a href="https://baza-vozil.spletne-resitve.com" target="_blank" class="flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg>
-                                    Poglej podrobno
-                                </a>
-                            </li>
-                        </ul>
+                        <!-- Text -->
+                        <div class="text-container">
+                            <h5 class="leading-8 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                                Aktualna zbirka rabljenih vozil
+                            </h5>
+                            <div class="text">
+                                <p class="text-sm leading-normal">
+                                    Baza preko <span>60.000</span> osebnih, gospodarskih in motornih vozil na slovenskem trgu. Bazo podatkov ponujam kot plačljivo storitev preko API-ja in imam dve stranki.
+                                </p>
+                            </div>
+                            <!-- Tags -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap">
+                                <li class="tag">Python</li>
+                                <li class="tag">Selenium</li>
+                                <li class="tag">Scraping</li>
+                                <li class="tag">SQL</li>
+                                <li class="tag">API</li>
+                            </ul>
+                            <!-- Links -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
+                                <li class="hover:text-primary cursor-pointer">
+                                    <a href="https://baza-vozil.spletne-resitve.com" target="_blank" class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"/></svg>
+                                        Poglej podrobno
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                {/if}
-                {#if focusedProject == 'MojeLinije'}
-                <!-- Image -->
-                <!-- svelte-ignore a11y_click_events_have_key_events -->
-                <!-- svelte-ignore a11y_no_static_element_interactions -->
-                <div class="flex items-center z-50 relative" onclick={() => focusedProject = null} transition:slide>
-                    <img src={MojeLinije} class="w-3/4 rounded h-[22rem] object-cover" alt="">
-                </div>
-                {:else}
-                <div class="project" transition:slide>
+                    {/if}
+                    {#if focusedProject == 'MojeLinije'}
                     <!-- Image -->
                     <!-- svelte-ignore a11y_click_events_have_key_events -->
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="image" onclick={() => focusedProject = 'MojeLinije'}>
-                        <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
-                        </div>
-                        <img src={MojeLinije} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
+                    <div class="flex items-center z-50 relative" onclick={() => focusedProject = null} transition:slide>
+                        <img src={MojeLinije} class="w-3/4 rounded h-[22rem] object-cover" alt="">
                     </div>
-                    <!-- Text -->
-                    <div class="text-container">
-                        <h5 class="leading-6 text-slate-200 mb-6 w-full text-3xl font-semibold">
-                            Moje Linije - načrtovalec poti
-                        </h5>
-                        <div class="text">
-                            <p class="text-sm leading-normal">
-                                <span>"Google Maps za slovenski javni prevoz."</span> Zaradi zastarelega načrtovalca poti podjetja Arriva in Slovenskih železnic sem se odločil, da naredim svojega. Aplikacija omogoča načrtovanje poti z vlakom in avtobusom po celotni Sloveniji. Aplikacijo sem predstavil <span>Ministrstvu za digitalno preobrazbo</span> in dvem <span>podjetniškim inkubatorjema</span>.
-                            </p>
+                    {:else}
+                    <div class="project" transition:slide>
+                        <!-- Image -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <div class="image" onclick={() => focusedProject = 'MojeLinije'}>
+                            <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                            </div>
+                            <img src={MojeLinije} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
                         </div>
-                        <!-- Tags -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
-                            <li class="tag">Python</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">HTMl & CSS</li>
-                        </ul>
-                        <!-- Links -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
-                            <li class="hover:text-primary cursor-pointer">
-                                <a href="https://github.com/vidpesko/MojeLinije" target="_blank" class="flex items-center gap-2">
-                                    Poglej podrobno
-                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
-                                </a>
-                            </li>
-                        </ul>
+                        <!-- Text -->
+                        <div class="text-container">
+                            <h5 class="leading-6 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                                Moje Linije - načrtovalec poti
+                            </h5>
+                            <div class="text">
+                                <p class="text-sm leading-normal">
+                                    <span>"Google Maps za slovenski javni prevoz."</span> Zaradi zastarelega načrtovalca poti podjetja Arriva in Slovenskih železnic sem se odločil, da naredim svojega. Aplikacija omogoča načrtovanje poti z vlakom in avtobusom po celotni Sloveniji. Aplikacijo sem predstavil <span>Ministrstvu za digitalno preobrazbo</span> in dvem <span>podjetniškim inkubatorjema</span>.
+                                </p>
+                            </div>
+                            <!-- Tags -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                                <li class="tag">Python</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">HTMl & CSS</li>
+                            </ul>
+                            <!-- Links -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                                <li class="hover:text-primary cursor-pointer">
+                                    <a href="https://github.com/vidpesko/MojeLinije" target="_blank" class="flex items-center gap-2">
+                                        Poglej podrobno
+                                        <svg xmlns="http://www.w3.org/2000/svg"  class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                {/if}
-                {#if focusedProject == 'Controly'}
-                <!-- Image -->
-                <!-- svelte-ignore a11y_click_events_have_key_events -->
-                <!-- svelte-ignore a11y_no_static_element_interactions -->
-                <div class="flex items-center z-50 relative w-full" onclick={() => focusedProject = null} transition:slide>
-                    <img src={Controly3} class="w-1/3 rounded-s h-[22rem] object-cover" alt="">
-                    <img src={Controly2} class="w-1/3 rounded-e h-[22rem] object-cover" alt="">
-                    <img src={Controly1} class="w-1/3 h-[22rem] object-cover" alt="">
-                </div>
-                {:else}
-                <div class="project project-reversed" transition:slide>
+                    {/if}
+                    {#if focusedProject == 'Controly'}
                     <!-- Image -->
                     <!-- svelte-ignore a11y_click_events_have_key_events -->
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="image" onclick={() => focusedProject = 'Controly'}>
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
-                        </div>
-                        <img src={ControlyThumb} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
+                    <div class="flex items-center z-50 relative w-full" onclick={() => focusedProject = null} transition:slide>
+                        <img src={Controly3} class="w-1/3 rounded-s h-[22rem] object-cover" alt="">
+                        <img src={Controly2} class="w-1/3 rounded-e h-[22rem] object-cover" alt="">
+                        <img src={Controly1} class="w-1/3 h-[22rem] object-cover" alt="">
                     </div>
-                    <!-- Text -->
-                    <div class="text-container">
-                        <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
-                            Controly - LED stopnice
-                        </h5>
-                        <div class="text">
-                            <p class="text-sm leading-normal">
-                                Ob gradnji nove hiše smo se odločili, da bomo po stopnicah namestili LED trakove, ki se prižgejo ob zaznanem gibanju. Ker takega izdelka ni bilo na trgu, sem rabil razviti tako elektronsko kot programsko rešitev. Projekt pa dopolnjuje še aplikacija za nadzor in nastavitev.
-                            </p>
+                    {:else}
+                    <div class="project project-reversed" transition:slide>
+                        <!-- Image -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <div class="image" onclick={() => focusedProject = 'Controly'}>
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                            </div>
+                            <img src={ControlyThumb} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
                         </div>
-                        <!-- Tags -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
-                            <li class="tag">Python</li>
-                            <li class="tag">Arduino</li>
-                            <li class="tag">C++</li>
-                            <li class="tag">Elektronika</li>
-                        </ul>
-                        <!-- Links -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
-                            <li class="hover:text-primary cursor-pointer">
-                                <a href="https://github.com/vidpesko/Controly" target="_blank" class="flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
-                                    Poglej podrobno
-                                </a>
-                            </li>
-                        </ul>
+                        <!-- Text -->
+                        <div class="text-container">
+                            <h5 class="leading-5 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                                Controly - LED stopnice
+                            </h5>
+                            <div class="text">
+                                <p class="text-sm leading-normal">
+                                    Ob gradnji nove hiše smo se odločili, da bomo po stopnicah namestili LED trakove, ki se prižgejo ob zaznanem gibanju. Ker takega izdelka ni bilo na trgu, sem rabil razviti tako elektronsko kot programsko rešitev. Projekt pa dopolnjuje še aplikacija za nadzor in nastavitev.
+                                </p>
+                            </div>
+                            <!-- Tags -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
+                                <li class="tag">Python</li>
+                                <li class="tag">Arduino</li>
+                                <li class="tag">C++</li>
+                                <li class="tag">Elektronika</li>
+                            </ul>
+                            <!-- Links -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-start">
+                                <li class="hover:text-primary cursor-pointer">
+                                    <a href="https://github.com/vidpesko/Controly" target="_blank" class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg"  class="w-7 h-7" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                        Poglej podrobno
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                {/if}
+                    {/if}
 
-                <div class="project">
-                    <!-- Image -->
-                    <!-- svelte-ignore a11y_click_events_have_key_events -->
-                    <!-- svelte-ignore a11y_no_static_element_interactions -->
-                    <div class="image">
-                        <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                    <div class="project">
+                        <!-- Image -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <div class="image">
+                            <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
+                            </div>
+                            <img src={MojeLinije} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
                         </div>
-                        <img src={MojeLinije} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
-                    </div>
-                    <!-- Text -->
-                    <div class="text-container">
-                        <h5 class="leading-6 text-slate-200 mb-6 w-full text-3xl font-semibold">
-                            Video in foto montaža
-                        </h5>
-                        <div class="text">
-                            <p class="text-sm leading-normal">
-                                <span>"Google Maps za slovenski javni prevoz."</span> Zaradi zastarelega načrtovalca poti podjetja Arriva in Slovenskih železnic sem se odločil, da naredim svojega. Aplikacija omogoča načrtovanje poti z vlakom in avtobusom po celotni Sloveniji. Aplikacijo sem predstavil <span>Ministrstvu za digitalno preobrazbo</span> in dvem <span>podjetniškim inkubatorjema</span>.
-                            </p>
+                        <!-- Text -->
+                        <div class="text-container">
+                            <h5 class="leading-6 text-slate-200 mb-6 w-full text-3xl font-semibold">
+                                Video in foto montaža
+                            </h5>
+                            <div class="text">
+                                <p class="text-sm leading-normal">
+                                    <span>"Google Maps za slovenski javni prevoz."</span> Zaradi zastarelega načrtovalca poti podjetja Arriva in Slovenskih železnic sem se odločil, da naredim svojega. Aplikacija omogoča načrtovanje poti z vlakom in avtobusom po celotni Sloveniji. Aplikacijo sem predstavil <span>Ministrstvu za digitalno preobrazbo</span> in dvem <span>podjetniškim inkubatorjema</span>.
+                                </p>
+                            </div>
+                            <!-- Tags -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                                <li class="tag">Python</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">HTMl & CSS</li>
+                            </ul>
+                            <!-- Links -->
+                            <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
+                                <li class="hover:text-primary cursor-pointer">
+                                    <a href="https://www.youtube.com/@vidpesko4919" target="_blank" class="flex items-center gap-2">
+                                        Povezava do YouTube kanala
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 512 512"><!-- Icon from IonIcons by Ben Sperry - https://github.com/ionic-team/ionicons/blob/main/LICENSE --><path fill="currentColor" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <!-- Tags -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
-                            <li class="tag">Python</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">HTMl & CSS</li>
-                        </ul>
-                        <!-- Links -->
-                        <ul class="flex items-center gap-2 mt-4 flex-wrap justify-end">
-                            <li class="hover:text-primary cursor-pointer">
-                                <a href="https://www.youtube.com/@vidpesko4919" target="_blank" class="flex items-center gap-2">
-                                    Povezava do YouTube kanala
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 512 512"><!-- Icon from IonIcons by Ben Sperry - https://github.com/ionic-team/ionicons/blob/main/LICENSE --><path fill="currentColor" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
