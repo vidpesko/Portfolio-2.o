@@ -3,6 +3,7 @@
     import GZCeljeThumbnail from '$lib/static/images/thumbnail gz celje.png';
     import VozilaThumb from '$lib/static/images/vozila thumb.png';
     import Vozila2 from '$lib/static/images/vozila 3.png';
+    import Kanal from '$lib/static/images/kanal.png';
     import ControlyThumb from '$lib/static/images/controly thumb.png';
     import Controly1 from '$lib/static/images/controly 1.png';
     import Controly2 from '$lib/static/images/controly 2.png';
@@ -562,7 +563,7 @@
                         <div class="image">
                             <div class="absolute inset-0 bg-gradient-to-l from-black/50 flex items-center justify-center text-white text-xl font-bold z-20 gradient">
                             </div>
-                            <img src={MojeLinije} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
+                            <img src={Kanal} class="w-full rounded border border-slate-600 p-px z-10 relative" alt="">
                         </div>
                         <!-- Text -->
                         <div class="text-container">
@@ -571,7 +572,7 @@
                             </h5>
                             <div class="text">
                                 <p class="text-sm leading-normal">
-                                    <span>"Google Maps za slovenski javni prevoz."</span> Zaradi zastarelega načrtovalca poti podjetja Arriva in Slovenskih železnic sem se odločil, da naredim svojega. Aplikacija omogoča načrtovanje poti z vlakom in avtobusom po celotni Sloveniji. Aplikacijo sem predstavil <span>Ministrstvu za digitalno preobrazbo</span> in dvem <span>podjetniškim inkubatorjema</span>.
+                                    Že od osnovne šole se ukvarjam z snemanjem in fotografiranjem, ter s nadaljno obdelavo in montažo slik in video posnetkov. Vsa dela objavljam na svoj Youtube kanal. 
                                 </p>
                             </div>
                             <!-- Tags -->
