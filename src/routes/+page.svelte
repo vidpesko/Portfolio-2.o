@@ -68,7 +68,7 @@
         <!-- Left side / personal info -->
         <header class="sticky w-1/3 top-0 xl:flex flex-col justify-between h-screen pt-24 pb-16 hidden">
             <div class="">
-                <h1 class="text-5xl font-bold tracking-tight text-slate-200">Vid Pesko</h1>
+                <h1 class="text-5xl font-bold tracking-tight text-slate-200">Tatjana Pesko</h1>
                 <h2 class="text-xl mt-3 text-slate-200 tracking-tight">Programer</h2>
                 <p class="max-w-xs mt-4">Mladi full-stack programer z velikimi željami.</p>
                 <!-- Personal info -->
